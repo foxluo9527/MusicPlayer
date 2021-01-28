@@ -6,4 +6,18 @@
 </br> 播放控制包含下一首，上一首，暂停，随机、单曲和列表循环播放，播放列表，控制歌曲播放的进度，歌词进度等功能，此次之外还可以管理歌曲下载、管理‘我的喜欢’以及查看歌曲评论分享歌曲等功能。
 <br/> 设置界面还可以设置播放通知栏，显示锁屏歌词，定时关闭等功能。
 <p>运行截图</p>
-<img src="http://www.foxluo.cn/OrderingSystem/images/MusicPlayerScreenShoot/1601601515507.jpg">
+![image](http://www.foxluo.cn/OrderingSystem/images/MusicPlayerScreenShoot/1601601515507.jpg)
+![image](http://www.foxluo.cn/OrderingSystem/images/MusicPlayerScreenShoot/1601601515509.jpg)
+![image](http://www.foxluo.cn/OrderingSystem/images/MusicPlayerScreenShoot/1601601515511.jpg)
+![image](http://www.foxluo.cn/OrderingSystem/images/MusicPlayerScreenShoot/1601601515515.jpg)
+![image](http://www.foxluo.cn/OrderingSystem/images/MusicPlayerScreenShoot/1601601515519.jpg)
+![image](http://www.foxluo.cn/OrderingSystem/images/MusicPlayerScreenShoot/1601601515524.jpg)
+![image](http://www.foxluo.cn/OrderingSystem/images/MusicPlayerScreenShoot/1601601515527.jpg)
+![image](http://www.foxluo.cn/OrderingSystem/images/MusicPlayerScreenShoot/1601601515529.jpg)
+![image](http://www.foxluo.cn/OrderingSystem/images/MusicPlayerScreenShoot/1601601515531.jpg)
+![image](http://www.foxluo.cn/OrderingSystem/images/MusicPlayerScreenShoot/1601601515532.jpg)
+![image](http://www.foxluo.cn/OrderingSystem/images/MusicPlayerScreenShoot/1601601515534.jpg)
+![image](http://www.foxluo.cn/OrderingSystem/images/MusicPlayerScreenShoot/1601601515536.jpg)
+![image](http://www.foxluo.cn/OrderingSystem/images/MusicPlayerScreenShoot/1601601515538.jpg)
+![image](http://www.foxluo.cn/OrderingSystem/images/MusicPlayerScreenShoot/1601601515542.jpg)
+![image](http://www.foxluo.cn/OrderingSystem/images/MusicPlayerScreenShoot/1601601515543.jpg)
