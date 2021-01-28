@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/recommend_refresh"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <cn.bingoogolapple.bgabanner.BGABanner
+                android:id="@+id/recommend_banner"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                app:banner_pointAutoPlayInterval="5000"
+                app:banner_pointAutoPlayAble="true"
+                app:banner_pointContainerBackground="@android:color/transparent"
+                app:banner_pointDrawable="@drawable/bga_banner_selector_point_hollow"
+                android:background="@drawable/home_login_btn_bg"
+                app:banner_transitionEffect="alpha" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="热门歌单"
+                    android:textColor="@color/text_black"
+                    android:textSize="16dp" />
+
+                <Button
+                    android:id="@+id/hot_song_btn_more"
+                    android:layout_width="70dp"
+                    android:layout_height="26dp"
+                    android:background="@drawable/home_login_btn_bg"
+                    android:text="查看更多"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+            <com.example.musicplayerdome.ui.component.MaxRecyclerView
+                android:id="@+id/hot_song_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="新碟 | 新歌"
+                    android:textColor="@color/text_black"
+                    android:textSize="16dp" />
+
+                <Button
+                    android:id="@+id/new_album_btn_more"
+                    android:layout_width="70dp"
+                    android:layout_height="26dp"
+                    android:background="@drawable/home_login_btn_bg"
+                    android:text="查看更多"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+            <com.example.musicplayerdome.ui.component.MaxRecyclerView
+                android:id="@+id/new_album_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="排行榜"
+                    android:textColor="@color/text_black"
+                    android:textSize="16dp" />
+
+
+                    <Button
+                        android:id="@+id/rank_list_btn_more"
+                        android:layout_width="70dp"
+                        android:layout_height="26dp"
+                        android:background="@drawable/home_login_btn_bg"
+                        android:text="查看更多"
+                        android:textSize="12dp" />
+
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/rank_list_View"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

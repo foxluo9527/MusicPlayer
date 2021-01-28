@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activity.SearchLrcActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/btn_return"
+            android:onClick="doClick"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_margin="10dp"
+            app:srcCompat="@drawable/back2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:text="修改歌词信息" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:layout_marginVertical="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="歌曲名" />
+
+        <LinearLayout
+            android:layout_width="1dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/colorPrimaryDark"
+            android:orientation="vertical"></LinearLayout>
+
+        <EditText
+            android:id="@+id/edit_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="10dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:gravity="left"
+            android:inputType="textPersonName"
+            android:background="@null"
+            android:textSize="15dp"
+            android:textCursorDrawable="@drawable/edit_text_cursor"
+            android:hint="歌曲名"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="歌手名" />
+
+        <LinearLayout
+            android:layout_width="1dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/colorPrimaryDark"
+            android:orientation="vertical"></LinearLayout>
+
+        <EditText
+            android:id="@+id/edit_singer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="10dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:gravity="left"
+            android:inputType="textPersonName"
+            android:background="@null"
+            android:textSize="15dp"
+            android:textCursorDrawable="@drawable/edit_text_cursor"
+            android:hint="歌手名"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="20dp"
+        android:layout_marginVertical="10dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/search_btn"
+            android:onClick="doClick"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:background="@drawable/bga_pp_selector_btn_confirm"
+            android:text="按条件搜索歌词" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14dp"
+            android:textColor="@color/text_black"
+            android:layout_margin="5dp"
+            android:text="歌词" />
+
+        <LinearLayout
+            android:id="@+id/search_loading_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.zyao89.view.zloading.ZLoadingView
+                android:id="@+id/loadding"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                app:z_color="@color/colorAccent"
+                app:z_type="SearchPathBuilder" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/lrcs_view"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/save"
+        android:onClick="doClick"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/item_press"
+        android:clickable="true"
+        android:focusable="false"
+        android:gravity="center_horizontal|center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="保存歌词" />
+    </LinearLayout>
+</LinearLayout>

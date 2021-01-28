@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:padding="20dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_black"
+        android:textSize="16dp"
+        android:text="选择排序方式" />
+    <LinearLayout
+        android:id="@+id/default_order_view"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:clickable="true"
+        android:focusable="false"
+        android:background="@drawable/item_dark_press"
+        android:layout_marginBottom="1dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="10dp"
+            app:srcCompat="@drawable/time1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="默认排序" />
+
+        <ImageView
+            android:id="@+id/order_default_c"
+            android:visibility="gone"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="10dp"
+            app:srcCompat="@drawable/point_c" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/name_order_view"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:clickable="true"
+        android:focusable="false"
+        android:background="@drawable/item_dark_press"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="10dp"
+            app:srcCompat="@drawable/a" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="歌名排序" />
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/order_name_c"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="10dp"
+            app:srcCompat="@drawable/point_c" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/album_order_view"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:clickable="true"
+        android:focusable="false"
+        android:background="@drawable/item_dark_press"
+        android:layout_marginVertical="1dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="10dp"
+            app:srcCompat="@drawable/zhuanji" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="专辑名排序" />
+
+        <ImageView
+            android:id="@+id/order_zhuanji_c"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="10dp"
+            android:visibility="gone"
+            app:srcCompat="@drawable/point_c" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/singer_order_view"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:clickable="true"
+        android:focusable="false"
+        android:background="@drawable/item_dark_press"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="10dp"
+            app:srcCompat="@drawable/person" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="歌手排序" />
+
+        <ImageView
+            android:id="@+id/order_singer_c"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="10dp"
+            android:visibility="gone"
+            app:srcCompat="@drawable/point_c" />
+    </LinearLayout>
+</LinearLayout>

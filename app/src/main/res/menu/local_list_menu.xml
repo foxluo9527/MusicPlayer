@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/add_local_music" android:title="扫描本地歌曲" />
+    <item android:id="@+id/select_order" android:title="选择排序方式" />
+    <item android:id="@+id/match_lrc" android:title="匹配词图" />
+    <item android:id="@+id/edit_song_list" android:title="编辑歌单信息"/>
+
+</menu>

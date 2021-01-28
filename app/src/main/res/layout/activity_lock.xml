@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:chuck="http://schemas.android.com/apk/res-auto"
+    android:windowAnimationStyle="@null"
+    android:background="@color/colorPrimary"
+    tools:context=".ui.activity.LockActivity">
+
+    <LinearLayout
+        android:id="@+id/main_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/whiteBg"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/time_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="27dp"
+                android:layout_marginTop="30dp"
+                android:textColor="@color/black"
+                android:textSize="40dp" />
+
+            <TextView
+                android:id="@+id/date_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="27dp"
+                android:layout_marginTop="89dp"
+                android:textColor="@color/black"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/day_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="104dp"
+                android:layout_marginTop="89dp"
+                android:textColor="@color/black"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/music_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="27dp"
+                android:layout_marginTop="119dp"
+                android:maxWidth="200dp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="13dp" />
+
+            <TextView
+                android:id="@+id/singer_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="27dp"
+                android:layout_marginTop="139dp"
+                android:maxWidth="200dp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="13dp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/whiteBg"
+            android:orientation="vertical">
+            <com.lauzy.freedom.library.LrcView
+                android:id="@+id/lock_lrc"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_marginHorizontal="20dp"
+                android:clickable="false"
+                android:focusable="false"
+                android:layout_marginTop="10dp"
+                android:focusableInTouchMode="false"
+                android:nestedScrollingEnabled="false"
+                app:currentIndicateLrcColor="@color/black"
+                app:indicatorLineColor="@color/colorPrimary"
+                app:indicatorTextColor="@color/text_black"
+                app:lrcCurrentTextColor="@color/orange"
+                app:playIcon="@drawable/play_src_btn" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/lock_last"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:onClick="doClick"
+                    chuck:srcCompat="@drawable/last" />
+
+                <ImageView
+                    android:id="@+id/lock_play"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:onClick="doClick"
+                    chuck:srcCompat="@drawable/pause" />
+
+                <ImageView
+                    android:id="@+id/lock_next"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:onClick="doClick"
+                    chuck:srcCompat="@drawable/next" />
+
+                <ImageView
+                    android:id="@+id/lock_like"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:onClick="doClick"
+                    chuck:srcCompat="@drawable/like" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/lightGrayBg"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="20dp"
+                android:paddingHorizontal="10dp"
+                android:orientation="horizontal">
+
+
+                <com.example.musicplayerdome.ui.component.SlideRightViewDragHelper
+                    android:id="@+id/lock_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/get_order_tv_left_time"
+                        android:layout_width="90dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/home_login_btn_bg"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="右滑解锁"
+                            android:textColor="@color/text_black"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/right1" />
+                    </LinearLayout>
+
+                </com.example.musicplayerdome.ui.component.SlideRightViewDragHelper>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

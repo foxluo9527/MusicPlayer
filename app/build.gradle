@@ -1,0 +1,122 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+    defaultConfig {
+        applicationId "com.example.musicplayerdome"
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.23.2"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        renderscriptTargetApi 18
+        renderscriptSupportModeEnabled true
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao' // apply plugin
+apply plugin: 'com.mob.sdk'
+dependencies {
+    implementation 'com.android.support:multidex:1.0.3'
+
+    implementation 'org.greenrobot:greendao:3.3.0' // add library
+    implementation 'com.github.yalantis:ucrop:2.2.4'
+    implementation 'com.zyao89:zloading:1.2.0'
+    implementation 'com.github.florent37:glidepalette:2.1.2'
+    implementation 'com.arialyy.aria:core:3.8.6'
+    annotationProcessor 'com.arialyy.aria:compiler:3.8.6'
+
+    implementation 'cn.bingoogolapple:bga-banner:3.0.0@aar'
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.navigation:navigation-fragment:2.0.0'
+    implementation 'androidx.navigation:navigation-ui:2.0.0'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+
+    implementation 'cn.bingoogolapple:bga-banner:2.2.7@aar'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+    implementation 'com.afollestad.material-dialogs:core:0.9.6.0'
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.6.2'
+    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.2'
+    testImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.2'
+    implementation 'pub.devrel:easypermissions:1.0.1'
+    implementation 'cn.bingoogolapple:bga-baseadapter:2.0.0@aar'
+    implementation 'cn.bingoogolapple:bga-photopicker:2.0.0@aar'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'cn.bingoogolapple:bga-refreshlayout-androidx:2.0.0@aar'
+    implementation 'com.github.duanhong169:picker-view:1.0.1'
+    implementation 'com.jyn.marqueeview:marqueetextview:1.0.0'
+
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+
+    implementation 'com.alibaba:fastjson:1.2.60'
+
+    implementation 'com.squareup.okhttp3:okhttp:3.14.2'
+    implementation 'com.squareup.okio:okio:1.17.4'
+
+    implementation 'com.danikula:videocache:2.7.0'
+
+    implementation 'com.github.Lauzy:LyricView:1.0.4'
+    implementation 'com.google.android.material:material:1.1.0'
+}
+MobSDK {
+    appKey "2e8c15aa02fd7"
+    appSecret "56e1893823851e59ddaa196b33c335e4"
+    ShareSDK {
+        loopShare false
+        devInfo {
+            Wechat {
+                appId "wx4868b35061f87885"
+                appSecret "64020361b8ec4c99936c0e3999a9f249"
+                userName "gh_afb25ac019c9"
+                path "pages/index/index.html?id=1"
+                withShareTicket true
+                miniprogramType 2
+            }
+            QQ {
+                appId "100371282"
+                appKey "aed9b0303e3ed1e27bae87c33761161d"
+            }
+            ShortMessage {}
+            SinaWeibo {
+                appKey "568898243"
+                appSecret "38a4f8204cc784f81f9f0daaf31e02e3"
+                callbackUri "http://www.sharesdk.cn"
+            }
+            WechatMoments {
+                appId "wx4868b35061f87885"
+                appSecret "64020361b8ec4c99936c0e3999a9f249"
+            }
+            WechatFavorite {
+                appId "wx4868b35061f87885"
+                appSecret "64020361b8ec4c99936c0e3999a9f249"
+            }
+            QZone {
+                appId "100371282"
+                appKey "aed9b0303e3ed1e27bae87c33761161d"
+            }
+        }
+    }
+}

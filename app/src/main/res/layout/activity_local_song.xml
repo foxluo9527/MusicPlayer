@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/lightGray"
+    tools:context=".ui.activity.LocalSongActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/btn_return"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:gravity="left"
+            android:onClick="doClick"
+            android:src="@drawable/back2" />
+
+        <TextView
+            android:id="@+id/listName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="0dp"
+            android:layout_toEndOf="@+id/btn_return"
+            android:text="歌单"
+            android:textSize="17dp" />
+
+        <LinearLayout
+            android:id="@+id/more"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="0dp"
+            android:background="@drawable/item_press"
+            android:clickable="true"
+            android:focusable="false"
+            android:gravity="center_horizontal|center_vertical"
+            android:onClick="doClick"
+            android:orientation="vertical"
+            android:paddingHorizontal="10dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                app:srcCompat="@drawable/more1" />
+        </LinearLayout>
+
+        <SearchView
+            android:id="@+id/list_search_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_toStartOf="@+id/more"
+            android:layout_toEndOf="@+id/listName"
+            android:queryHint="搜索歌单内歌曲" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/match_view"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:visibility="gone"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/match_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="正在匹配" />
+
+        <ProgressBar
+            android:id="@+id/match_progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/match_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0/0" />
+
+        <ImageView
+            android:id="@+id/close_match_view"
+            android:onClick="doClick"
+            android:clickable="true"
+            android:focusable="false"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_margin="10dp"
+            app:srcCompat="@drawable/delete2" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <include
+            layout="@layout/song_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/back_play"
+            android:onClick="doClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="28dp"
+            android:layout_marginBottom="71dp"
+            android:background="@drawable/bga_pp_selector_btn_confirm"
+            android:clickable="true"
+            android:focusable="false"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="5dp"
+            android:textSize="12dp"
+            android:text="回到播放"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/add_local_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/textView8"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="没有歌曲?试试"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/add_local_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:autoLink="all"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="doClick"
+                android:text="扫描本地歌曲"
+                android:textColor="@color/blue"
+                android:textSize="14dp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <include
+        layout="@layout/music_play_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp" />
+</LinearLayout>

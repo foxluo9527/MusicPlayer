@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="200dp"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:gravity="right"
+    android:orientation="vertical"
+
+    android:padding="1dp">
+
+    <RelativeLayout
+        android:id="@+id/main_view"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:paddingTop="50dp"
+        android:orientation="vertical">
+
+
+        <EditText
+            android:id="@+id/lrc_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="top|center_horizontal"
+            android:lineHeight="10dp"
+            android:paddingHorizontal="24dp"
+            android:scrollbars="vertical"
+            android:textColor="@color/text_black"
+            android:textSize="12dp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:gravity="right|center_vertical"
+        android:orientation="horizontal"
+        android:paddingVertical="5dp">
+
+        <RadioButton
+            android:id="@+id/radio_choice"
+            android:layout_margin="10dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:button="@null"
+            android:background="@drawable/radiobutton_selecter"/>
+    </LinearLayout>
+
+</LinearLayout>

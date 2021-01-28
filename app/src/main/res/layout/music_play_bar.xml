@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/show_music_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_press_bg"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:onClick="doClick"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.example.musicplayerdome.ui.component.CircleImageView
+                android:id="@+id/home_song_img"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_margin="6dp"
+                android:src="@drawable/music" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <com.example.musicplayerdome.ui.component.MarqueeTextView
+                android:id="@+id/home_song_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:text="歌曲名"
+                android:textColor="@color/text_black"
+                android:textSize="14dp" />
+
+            <com.example.musicplayerdome.ui.component.MarqueeTextView
+                android:id="@+id/home_song_lrc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:text="作者/歌词"
+                android:textColor="@color/darkGray"
+                android:textSize="11dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/play_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/btn_press_bg"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:onClick="doClick"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/home_song_play"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_margin="10dp"
+                app:srcCompat="@drawable/play" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/list_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/btn_press_bg"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:onClick="doClick"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="22dp"
+                android:layout_margin="10dp"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/more4" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
